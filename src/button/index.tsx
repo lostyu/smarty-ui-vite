@@ -77,6 +77,8 @@ export default defineComponent({
         text-${props.plain ? props.color + "-500" : "white"}
         hover:text-white
         
+        transition
+
         cursor-pointer
         m-1
       `}
@@ -86,7 +88,7 @@ export default defineComponent({
         ) : (
           ""
         )}
-        {slots.default ? slots.default() : "MyButton"}
+        {slots.default ? slots.default() : ""}
       </button>
     );
   },
