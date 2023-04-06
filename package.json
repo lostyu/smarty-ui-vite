@@ -33,6 +33,7 @@
     "@vue/test-utils": "^2.3.2",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
+    "cz-conventional-changelog-zh": "^0.0.2",
     "eslint": "^8.37.0",
     "eslint-config-alloy": "^4.9.0",
     "eslint-plugin-vue": "^9.10.0",
@@ -53,7 +54,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-conventional-changelog-zh"
     }
   }
 }
