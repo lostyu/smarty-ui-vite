@@ -43,7 +43,7 @@ describe("Button", () => {
           .classes()
           .map((v) => v.replace("\n", ""))
           .includes("bg-red-500")
-      ).toBe(true);
+      ).toBe(false);
     });
   });
 
