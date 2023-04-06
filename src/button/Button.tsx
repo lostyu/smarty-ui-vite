@@ -1,6 +1,8 @@
 import { defineComponent, PropType } from "vue";
 import "uno.css";
 
+let a = 123;
+console.log(555);
 export type ISize = "small" | "medium" | "large";
 export type IColor =
   | "black"
@@ -41,6 +43,8 @@ export default defineComponent({
   props,
   setup(props, { slots }) {
     // TODO py-1.5 有小数的情况
+    const a = 123;
+    // a = 123;
     const size = {
       small: {
         x: 2,
