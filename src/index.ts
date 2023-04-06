@@ -1,3 +1,4 @@
+// @ts-ignore
 import { createApp } from "vue/dist/vue.esm-browser";
 
 import MyButton from "./button";
