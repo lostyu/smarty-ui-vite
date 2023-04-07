@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../../dist/entry.css" />
   </head>
   <body>
     <h1>Demo</h1>
@@ -16,7 +17,7 @@
       import { SFCButton, JSXButton, MyButton } from "../../dist/smarty-ui.mjs";
 
       createApp({
-        template: `<SFCButton /> <JSXButton /> <MyButton />`,
+        template: `<SFCButton /> <JSXButton /> <MyButton>111</MyButton>`,
       })
         .component(SFCButton.name, SFCButton)
         .component(JSXButton.name, JSXButton)

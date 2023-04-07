@@ -41,6 +41,7 @@
     "jsdom": "^21.1.1",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
+    "terser": "^5.16.8",
     "unocss": "^0.50.6",
     "vite": "^4.2.1",
     "vitepress": "1.0.0-alpha.64",
