@@ -1,24 +1,33 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
+
 import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 
 import Unocss from "./config/unocss";
+import { BuildOptions } from "vite";
 
-const rollupOptions = {
-  external: ["vue", "vue-router"],
+// const rollupOptions: BuildOptions["rollupOptions"] = {
+const rollupOptions: BuildOptions["rollupOptions"] = {
+  external: ["vue"], // vue不会被打包在这里
   output: {
     globals: {
-      vue: "Vue",
+      vue: "Vue", // umd/iffe全局模块中组件库的名字
     },
+    exports: "named",
   },
 };
 
 export default defineConfig({
   plugins: [vue(), vueJsx({}), Unocss()],
+
   build: {
-    // 独立输出css文件
-    cssCodeSplit: true,
     rollupOptions,
+    // minify: "terser",
+    minify: "esbuild",
+    sourcemap: true,
+    // reportCompressedSize: true, // 默认就是true
+    cssCodeSplit: true, // 独立输出css文件
     lib: {
       entry: "./src/entry.ts",
       name: "SmartyUI",

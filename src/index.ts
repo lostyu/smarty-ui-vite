@@ -1,8 +1,9 @@
+// @ts-ignore
 import { createApp } from "vue/dist/vue.esm-browser";
 
-import MyButton from "./button";
-import SFCButton from "./SFCButton.vue";
-import JSXButton from "./JSXButton";
+// import MyButton from "./button";
+// import SFCButton from "./SFCButton.vue";
+// import JSXButton from "./JSXButton";
 import SmartyUI from "./entry";
 
 createApp({
