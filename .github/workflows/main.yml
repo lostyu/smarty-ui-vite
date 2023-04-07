@@ -5,13 +5,25 @@ on:
   pull_request:
     branches: [master]
 jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.4
+        with:
+          version: latest
+          run_install: true
+      - name: Run Lint
+        run: pnpm lint
+
   UnitTest:
     # 单元测试任务
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.2.4
-      - name: Install modules
-        run: pnpm install
+        with:
+          version: latest
+          run_install: true
       - name: Run Test
         run: pnpm run test:run
